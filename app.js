@@ -1,11 +1,17 @@
 //jshint esversion:6
+//require ("dotenv").config();
+ import dotenv from "dotenv";
+ dotenv.config();
 import express from "express";
 import bodyParser from "body-parser";
 import ejs from "ejs";
 import mongoose from "mongoose";
+import encrypt from "mongoose-encryption"
 import User from "./models/userModel.js";
 
+
 const app = express();
+
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
